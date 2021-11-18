@@ -1,13 +1,18 @@
 import express from 'express';
+import { movieApiFaker } from './apis/movie.api'
+import { logger } from './utils/logger'
 const app = express();
 const port = 8080 // default port to listen
 
-// define a route handler for the default home page
-app.get( '/', ( req, res ) => {
-    res.send( 'Hello world!' )
-} )
+setInterval(() => {
+    movieApiFaker().then(data => {
+        logger.info('Coming data ==>', data)
+    })
+}, 10000)
 
 // start the Express server
 app.listen( port, () => {
-    console.log( `Server has been started at http://localhost:${ port }` );
+    logger.info('=================================');
+    logger.info(`🚀 App listening on the port ${port}`);
+    logger.info('=================================');
 } )
