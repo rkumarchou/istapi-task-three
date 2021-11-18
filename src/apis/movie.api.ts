@@ -1,7 +1,7 @@
 import * as faker from 'faker'
 import { Movie } from '../interface/movie.interface'
 
-export const movieApiFaker = () => {
+export const movieApiFaker = (): Promise<Movie> => {
     return new Promise((resolve) => {
     setTimeout(() => {
         const movie: Movie = {
