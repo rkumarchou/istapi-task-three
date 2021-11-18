@@ -1,7 +1,7 @@
 {
   "name": "task-three",
   "version": "1.0.0",
-  "description": "Basic Express setup starter with TS",
+  "description": "Task three of the International Show Times API backend task",
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
@@ -18,7 +18,8 @@
   "keywords": [
     "Express",
     "TS",
-    "Node"
+    "Node",
+    "International Show Times API"
   ],
   "author": "Ritesh Chaudhary",
   "license": "MIT",
