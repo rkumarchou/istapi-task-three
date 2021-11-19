@@ -5,15 +5,18 @@
 ## Dev Environment setup
 
  * Clone the repository
+```
+git clone https://github.com/rkumarchou/istapi-task-three.git
+```
  * Go to project directory terminal 
 ```
-cd task-three
+cd istapi-task-three
 ```
  * Install the dependencies:
 ```
 yarn OR npm install
 ```
- * Create a .env file in the root directory and hacve a valid slack token that corresponds to some slack channel in real. Data in the .env file would look something like:
+ * Create a .env file in the root directory and have a valid slack token that corresponds to some slack channel in real. Data in the .env file would look something like:
 ```
 SLACK_TOKEN=<Some valid slack token>
 ```
@@ -27,4 +30,4 @@ yarn dev OR npm run dev
 ## How it works
  *  As soon as the server gets up at `localhost:8080`, the setInterval keeps hitting the movieApiFaker to get the latest movie data every 10 seconds
  *  movieApiFaker is a function that returns a promise which resolves into some new movie data. We can then throw this data wherever required like and wherever required like 'Slack', 'UI'(through socket), 'Database' and 'Logging systems'
- * For the demonstration purposes we have only used slack message publication and logging
+ * For the demonstration purposes we have only used slack message publication and logging.
